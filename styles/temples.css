@@ -1,0 +1,113 @@
+/* Estilos básicos: Mobile First */
+body {
+    background: #F8F9FA url('https://www.transparenttextures.com/patterns/asfalt-light.png');
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+
+
+
+header, main, footer {
+    padding: 1rem;
+    text-align: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 0.5rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+main {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+figure {
+    display: grid;
+    place-items: center;
+    margin: 1rem 0;
+}
+#menuButton {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+nav ul.open {
+    display: block;
+}
+
+@media only screen and (max-width: 768px) {
+    #menuButton {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+    }
+
+    nav ul.open {
+        display: flex;
+    }
+}
+/* Estilo para el álbum */
+/* Diseño del álbum */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    padding: 2rem;
+    background-color: var(--deep-blue); /* Fondo de tu paleta de colores */
+    border-radius: 10px;
+}
+
+/* Estilo de las fotos tipo Polaroid */
+figure {
+    position: relative;
+    width: 200px;
+    background: white;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+figcaption {
+    margin-top: 10px;
+    font-size: 1rem;
+    font-style: italic;
+    color: var(--dark-purple);
+}
+
+/* Para lograr un efecto desalineado */
+figure:nth-child(odd) {
+    transform: rotate(-2deg);
+}
+
+figure:nth-child(even) {
+    transform: rotate(4deg);
+}
